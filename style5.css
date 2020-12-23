@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 30px;
+    font-family: sans-serif;
+    background: linear-gradient(0deg,#57e4e4,#f8f6f6);
+background-size: cover;
+background-position:center;
+height: 100vh;
+}
+#container{
+    position: relative;
+    width: 940px;
+}
+#container::after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+#menu{
+position: relative;
+float: left;
+width: 100%;
+border-radius: 50px;
+background: #1b3d53;
+padding: 10px 30px;
+
+}
+
+
+#menu,#menu ul{
+    list-style: none;
+}
+#menu > li{
+    float: left;
+    position:relative;
+    border-right: 1px solid rgba(0,0,0,0.1);
+box-shadow: 1px 0 0 rgba(0,0,0,0.1);
+perspective: 1000px;
+}
+#menu>li:first-child{
+    box-shadow: -1px 0 0 rgba(0,0,0,0.1),1px 0 0 rgba(255,255,255,0.25);
+}
+
+#menu a{
+    display: block;
+    position: relative;
+    z-index: 10;
+    padding: 13px 20px 13px 20px;
+    text-decoration: none;
+    color: white;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 16px;
+    background:transparent;
+    transition: all 0.25s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+#menu>li:hover>a{
+    background:#1b3d53;
+    color: rgba(0,223,252,1);
+    text-shadow: none;
+}
+#menu li ul {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 200px;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background:transparent;
+    overflow:hidden;
+    transform-origin: 50% 0%;
+}
+#menu li:hover ul{
+    padding: 15px 0;
+    background:#1b3d53;
+opacity: 1;
+visibility: visible;
+box-shadow: 1px 1px 7px rgba(0,0,0,0.5);
+animation: swingdown 1s ease;
+}
+@keyframes swingdown{
+    0%{
+        opacity: 0.9999;
+        transform: rotateX(90deg);
+    }
+    30%{
+        transform: rotateX(-20deg) rotateY(5deg);
+        animation-timing-function: ease-in-out;
+    }
+    65%{
+        transform: rotateX(20deg) rotateY(3deg);
+        animation-timing-function: ease-in-out;
+    }
+}
+
+#menu li li a{
+    padding-left:15px;
+    font-weight: 300;
+    color: #ddd;
+    text-shadow: none;
+    border-top: dotted 1px transparent;
+    border-bottom: dotted 1px transparent;
+    transition: all 0.15s linear;
+}
+#menu li li a:hover{
+   
+    color: rgba(0,223,252,1);
+    border-top: dotted 1px rgba(255,255,255,0.15);
+    border-bottom: dotted 1px rgba(255,255,255,0.15);
+    background: rgba(0,223,252,0.02);
+}

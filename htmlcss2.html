@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <title>educationsCSS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1>معرفی فتوشاپ </h1>
+        <p>
+            فتوشاپ یک نرم افزار ویرایشگر حرفه ای است و توسط توسعه یافته که Adobe Systems برای ساختن عکس ها بکار می رود و همه کسانی که با گرافیک کامپیوتری سر و کار دارند ، به نوعی محتاج این نرم افزار هستند. فتوشاپ ، امروز محبوب ترین نرم افزار در میان کاربران است که
+            لایه ها ، فیلترها ، براش ، 3 متن، اشیاء و غیره را پشتیبانی می کند . ، ، فیلم ها D محیط گرافیکی فتوشاپ کاملا تغییر و بهینه شده است تا بازهم کاربران به آسانی کار ویرایش را انجام دهند. البته براش ها و افکت های بسیار زیبا و جدیدی به نسخه جدید
+            اضافه گردیده اند. در نسخه جدید حتی می توان با کمی حوصله فایل های و به صورت انیمیشن طراحی کرد .
+        </p>
+    </div>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove", function(e) {
+            cursor.style.cssText = cursor2.style.cssText = "left:" + e.clientX + "px;top:" + e.clientY + "px";
+        });
+    </script>
+</body>
+
+</html>

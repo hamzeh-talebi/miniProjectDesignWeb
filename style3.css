@@ -1,0 +1,35 @@
+@import url('https: //fonts.googleapis.com/css?family=Poppins');
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #09f;
+}
+
+.fluid_container {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+#camera_wrap_4 {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin-bottom: 0 !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+}

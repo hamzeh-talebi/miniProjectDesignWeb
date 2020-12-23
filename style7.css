@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+section {
+    height: 100vh;
+    background: linear-gradient(rgb(152, 233, 213), rgb(112, 243, 210));
+    font-family: sans-serif;
+}
+
+.score {
+    color: rgb(255, 248, 248);
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.score h2{
+    font-size: 30px;
+}
+.score p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+.intro{
+    color: rgb(255, 248, 248);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   transition: opacity 0.1s ease ;
+}
+.intro h1{
+    font-size: 37px;
+}
+
+.intro button ,.match button{
+    margin: 5px;
+    width: 150px;
+    height: 50px;
+    background: rgb(45,117,96);
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    color:  rgb(255, 248, 248);
+    cursor: pointer;
+    outline: none;
+}
+.match button{
+    margin-bottom: -29px;
+}
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity 0.1s ease 0.1s;
+
+}
+.winner{
+    color: rgb(255, 248, 248);
+    text-align: center;
+    font-size: 50px;
+}
+.hands,.options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.player-hand{
+    transform: rotateY(180deg);
+}
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+@keyframes shakePlayer{
+0%{
+    transform: rotateY(180deg) translateY(0px);
+}
+10%{
+    transform: rotateY(180deg) translateY(-50px);
+}
+20%{
+    transform: rotateY(180deg) translateY(0px);
+}
+30%{
+    transform: rotateY(180deg) translateY(-50px);
+}
+40%{
+    transform: rotateY(180deg) translateY(0px);
+}
+50%{
+    transform: rotateY(180deg) translateY(-50px);
+}
+60%{
+    transform: rotateY(180deg) translateY(0px);
+}
+70%{
+    transform: rotateY(180deg) translateY(-50px);
+}
+80%{
+    transform: rotateY(180deg) translateY(0px);
+}
+90%{
+    transform: rotateY(180deg) translateY(-50px);
+}
+100%{
+    transform: rotateY(180deg) translateY(0px);
+}
+}
+@keyframes shakeComputer{
+0%{
+    transform:  translateY(0px);
+}
+10%{
+    transform:  translateY(-50px);
+}
+20%{
+    transform:  translateY(0px);
+}
+30%{
+    transform:  translateY(-50px);
+}
+40%{
+    transform: translateY(0px);
+}
+50%{
+    transform:  translateY(-50px);
+}
+60%{
+    transform:  translateY(0px);
+}
+70%{
+    transform:  translateY(-50px);
+}
+80%{
+    transform:  translateY(0px);
+}
+90%{
+    transform:  translateY(-50px);
+}
+100%{
+    transform: translateY(0px);
+}
+}

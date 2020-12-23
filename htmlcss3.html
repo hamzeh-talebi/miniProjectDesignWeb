@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <title>educationsCSS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fillhtmlcss3/camera.css">
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    span {
+        color: #09f !important;
+    }
+    
+    .fluid_container {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 0;
+    }
+    
+    .camera_thumbs {
+        margin-top: -100px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    #camera_wrap_4 {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin-bottom: 0 !important;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+    
+    .camera_thumbs_cont {
+        border-radius: 0;
+        backdrop: rgba(0, 0, 0, 0.2);
+    }
+    
+    .camera_overlayer {
+        opacity: 0.1;
+    }
+</style>
+
+<body>
+    <div class="fluid_container">
+        <div class="camra_wrap" id="camera_wrap_4">
+            <div data-thumb="thumbs/one.jpg" data-src="one.jpg"></div>
+            <div data-thumb="thumbs/two.jpg" data-src="two.jpg"></div>
+            <div data-thumb="thumbs/three.jpg" data-src="three.jpg"></div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js">
+    </script>
+    <script src="fillhtmlcss3/camera.min.js">
+    </script>
+    <script>
+        jQuery(function() {
+            jQuery('#camera_wrap_4').camera({
+                height: 'auto',
+                loder: 'bar',
+                pagination: false,
+                thumbnails: true,
+                hover: false,
+                opacityOnGrid: false,
+                imagePath: '..//images'
+            });
+        });
+    </script>
+
+</body>
+
+</html>
